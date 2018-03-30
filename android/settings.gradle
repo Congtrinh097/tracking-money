@@ -1,0 +1,3 @@
+rootProject.name = 'trackingmoney'
+
+include ':app'
