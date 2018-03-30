@@ -1,28 +1,30 @@
 import * as React from 'react';
-import {StatusBar, StyleSheet, View} from 'react-native';
+import {StatusBar, StyleSheet, View, Text} from 'react-native';
 
 
 interface thisState {
-  isReady: boolean,
-  isOffline: boolean
 }
 
-export default class App extends React.Component<any, thisState> {
+export default class AppContainer extends React.Component<any, thisState> {
   render() {
     return (
-        <View style={style.container}>
-          <StatusBar
-            translucent
-            barStyle="light-content"
-          />
+        <View style={styles.container}>
+          <Text style={styles.text}> This is home screen</Text>
         </View>
     );
   }
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#ff0',
+    justifyContent: 'center'
+  },
+  text: {
+    height: 30,
+    backgroundColor: '#f00',
+    textAlignVertical: 'center',
+    textAlign: 'center'
   }
 });
