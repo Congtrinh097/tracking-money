@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {StatusBar, StyleSheet, View, Text} from 'react-native';
+import {AppNavigation} from './AppNavigation/AppNavigation'
 
 
 interface thisState {
@@ -8,9 +9,9 @@ interface thisState {
 export default class AppContainer extends React.Component<any, thisState> {
   render() {
     return (
-        <View style={styles.container}>
-          <Text style={styles.text}> This is home screen</Text>
-        </View>
+      <View style={styles.container}>
+        <AppNavigation/>
+      </View>
     );
   }
 }
