@@ -8,16 +8,23 @@ const defaultAvatar = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b
 
 const menuData = [
   {
-    title: 'Trang chủ',
+    title: 'Hướng dẫn',
     linkTo: ScreenName.HomeScreen,
   },
   {
-    title: 'Thông tin cá nhân',
+    title: 'Về chúng tôi',
+    linkTo: ScreenName.ProfileScreen
+  },
+  {
+    title: 'Đánh giá ứng dụng',
     linkTo: ScreenName.ProfileScreen
   }
 ];
 
 export class SideBar extends React.Component<any, any> {
+
+  componentWillUnmount() {
+  }
 
   routeToScreen(screenName: string) {
     if (screenName) {
@@ -29,6 +36,7 @@ export class SideBar extends React.Component<any, any> {
     const activeMenuIndex = -1;
     return (
       <View style={style.container}>
+        <View style={style.headerLine}></View>
         <View style={style.menuListContainer}>
           {menuData.map((m, index) =>
             <TouchableOpacity activeOpacity={0.8} key={index}
@@ -43,8 +51,7 @@ export class SideBar extends React.Component<any, any> {
     )
   }
 
-  componentWillUnmount() {
-  }
+
 }
 
 const avatarSize = NativeHelper.ViewportWidth * .3;
@@ -55,13 +62,11 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  userInforContainer: {
-    flex: 2.8,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.Gray,
-    alignSelf: 'stretch',
+  headerLine: {
+    height: 60,
+    backgroundColor: Colors.RedStrong,
+    width: '100%',
+    elevation: 1,
   },
   menuListContainer: {
     flex: 7.2,
@@ -76,6 +81,9 @@ const style = StyleSheet.create({
     alignSelf: 'stretch',
     paddingHorizontal: 30,
     paddingVertical: 15,
+    borderBottomWidth : 1,
+    borderBottomColor : Colors.AliceBlue,
+    elevation: 1,
   },
   menuListItemSelected: {
     backgroundColor: Colors.Blue,
@@ -89,22 +97,11 @@ const style = StyleSheet.create({
     tintColor: Colors.White,
   },
   menuListItemText: {
-    fontSize: 18,
+    fontSize: 16,
     color: Colors.Gray,
     marginLeft: 10
   },
   menuListItemTextSelected: {
     color: Colors.White,
   },
-  userAvatar: {
-    width: avatarSize,
-    height: avatarSize,
-    borderRadius: avatarSize / 2,
-    resizeMode: 'cover',
-  },
-  userText: {
-    fontSize: 18,
-    color: '#000',
-    marginTop: 10,
-  }
 });
