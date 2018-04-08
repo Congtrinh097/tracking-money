@@ -11,13 +11,13 @@ interface thisState {
 }
 export class ProfileScreen extends React.Component<thisProps, thisState> {
   static navigationOptions = {
-    headerTitle:'Profile',
+    headerTitle:'About',
   };
 
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Profile Screen</Text>
+        <Text>About Screen</Text>
         <Button
           title="Go to Home"
           onPress={() => {

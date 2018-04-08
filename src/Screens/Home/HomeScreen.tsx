@@ -22,9 +22,9 @@ export class HomeScreen extends React.Component<thisProps, thisState> {
 
   renderHeader() {
     return (
-      <View style={{backgroundColor: Colors.RedStrong, flexDirection: 'row'}}>
+      <View style={{backgroundColor: Colors.Green, flexDirection: 'row'}}>
         <View style={{
-          height: 60, width: 60, backgroundColor: Colors.RedStrong, justifyContent: 'center', alignItems: 'center',
+          height: 60, width: 60, backgroundColor: Colors.Green, justifyContent: 'center', alignItems: 'center',
           position: 'absolute', left: 0
         }}>
           <Button
@@ -35,7 +35,7 @@ export class HomeScreen extends React.Component<thisProps, thisState> {
           </Button>
         </View>
         <View style={{flex: 1, height: 60, justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={{textAlign: 'center', fontSize: 16, fontWeight: 'bold', color: '#fff'}}>Ghi điểm tiến lên</Text>
+          <Text style={{textAlign: 'center', fontSize: 16, fontWeight: 'bold', color: '#fff'}}>100.000</Text>
         </View>
       </View>
     );
@@ -46,39 +46,6 @@ export class HomeScreen extends React.Component<thisProps, thisState> {
       <Container style={{backgroundColor: Colors.White}}>
         {this.renderHeader()}
         <View style={{flex: 1}}>
-          <View style={styles.logoContainer}>
-            <Image source={AppImage.Logo} style={{height: '80%', width: '80%', resizeMode: 'contain'}}/>
-          </View>
-          <View style={{flex: 6}}>
-            <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-              <Button bordered
-                      style={styles.redButton}
-                      onPress={() => {
-
-                      }}
-              >
-                <Text style={{fontWeight: 'bold', color: Colors.White,}}>Bắt đầu</Text>
-              </Button>
-            </View>
-            <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-              <Button bordered
-                      style={styles.borderButton}
-                      onPress={() => {
-                      }}
-              >
-                <Text style={{fontWeight: 'bold', color: Colors.Black}}>Hướng dẫn</Text>
-              </Button>
-              <Button bordered
-                      style={styles.borderButton}
-                      onPress={() => {
-                      }}
-              >
-                <Text style={{fontWeight: 'bold', color: Colors.Black}}>Đánh giá</Text>
-              </Button>
-            </View>
-
-          </View>
-          <View style={{flex: 0.5, backgroundColor: Colors.RedStrong}}></View>
         </View>
       </Container>
     );
