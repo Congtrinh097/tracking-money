@@ -17,5 +17,8 @@ export const Size = {
 };
 
 export const AppImage = {
-  Logo: require('../../assets/images/logo.png')
+  Logo: require('../../assets/images/logo.png'),
+  IconFb: require('../../assets/images/icon_fb.png'),
+  IconGG: require('../../assets/images/icon_gg.png'),
+  IconHideEye: require('../../assets/images/icon_hide_eye.png'),
 }

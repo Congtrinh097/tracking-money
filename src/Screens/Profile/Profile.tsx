@@ -22,7 +22,7 @@ export class ProfileScreen extends React.Component<thisProps, thisState> {
           title="Go to Home"
           onPress={() => {
             /* 1. Navigate to the Details route with params */
-            this.props.navigation.navigate(ScreenName.HomeScreen);
+            this.props.navigation.navigate(ScreenName.SignUpScreen);
           }}
         />
       </View>

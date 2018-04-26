@@ -1,15 +1,16 @@
 import * as React from 'react'
-import { StackNavigator } from 'react-navigation';
+import {StackNavigator} from 'react-navigation';
 import {HomeScreen} from "../../Screens/Home/Home";
 import {ProfileScreen} from "../../Screens/Profile/Profile";
-import { View } from 'react-native';
-import { Button, Icon } from 'native-base';
+import {View} from 'react-native';
+import {Button, Icon} from 'native-base';
+import {SignUpScreen} from "../../Screens/SignUp/SignUp";
 
 const renderDrawerBtn = (props: any) => {
   return (
-    <View >
+    <View>
       <Button transparent onPress={() => props.navigation.navigate('DrawerOpen')}>
-        <Icon name='ios-menu' style={{ color: '#3526ff', fontSize: 40 }} />
+        <Icon name='ios-menu' style={{color: '#3526ff', fontSize: 40}}/>
       </Button>
     </View>
   )
@@ -26,9 +27,11 @@ export const HomeStackNavigator = StackNavigator({
   },
   ProfileScreen: {
     screen: ProfileScreen,
-  }
-
+  },
+  SignUpScreen: {
+    screen: SignUpScreen,
+  },
 }, {
-  initialRouteName: "HomeScreen",
-  headerMode : 'screen'
+  initialRouteName: "ProfileScreen",
+  headerMode: 'screen'
 });
