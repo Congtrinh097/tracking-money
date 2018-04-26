@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {StackNavigator} from 'react-navigation';
-import {HomeScreen} from "../../Screens/Home/Home";
-import {ProfileScreen} from "../../Screens/Profile/Profile";
+import {HomeScreen} from "../../Screens/Home/HomeScreen";
+import {ProfileScreen} from "../../Screens/AboutScreen/AboutScreen";
 import {View} from 'react-native';
 import {Button, Icon} from 'native-base';
 import {SignUpScreen} from "../../Screens/SignUp/SignUp";

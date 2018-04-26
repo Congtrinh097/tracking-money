@@ -9,7 +9,8 @@ export const Colors = {
   Black: '#000',
   AliceBlue: '#f6f8fa',
   LightBlue: '#e8eeff',
-  RedStrong: '#F44336'
+  RedStrong: '#F44336',
+  Green: '#2CB84B'
 };
 
 export const Size = {
