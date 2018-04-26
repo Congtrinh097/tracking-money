@@ -8,5 +8,6 @@ export const NativeHelper = {
 
 export const ScreenName = {
   HomeScreen: 'HomeScreen',
-  ProfileScreen: 'ProfileScreen'
+  ProfileScreen: 'ProfileScreen',
+  SignUpScreen: 'SignUpScreen'
 }
